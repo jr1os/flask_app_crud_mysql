@@ -1,0 +1,77 @@
+{% include "header.html" %}
+
+
+{% block body %}
+
+
+<div class="panel=heading">
+
+<h2>Add Movies <a class="pull-right btn btn-success" href="/">Back</a> </h2>
+
+</div>
+
+
+
+<div class="panel-body">
+
+<form action="{{ url_for('processtudent') }}" method="post">
+<div class="form-group">
+
+    <label for="name">Type</label>
+    <input type="text" class="form-control" name="name" id="type" required = "1"  >
+
+</div>
+
+<div class="form-group">
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="email" id="name" required = "1" >
+
+</div>
+
+<div class="form-group">
+
+    <label for="name">Total episodes</label>
+    <input type="text" class="form-control" name="email" id="total_ep" required = "1" >
+
+</div>
+
+<div class="form-group">
+
+    <label for="name">Actual episodes</label>
+    <input type="text" class="form-control" name="email" id="actual_ep" required = "1" >
+
+</div>
+
+ <div class="form-group">
+
+    <label for="name">Last episodes</label>
+    <input type="text" class="form-control" name="phone" id="last_view" required = "1"  >
+
+</div>
+
+
+    <div class="form-group">
+        <input type="hidden" name="id" value="1">
+
+     <input type="hidden" name="action" value="edit">
+     <input type="submit" class="btn btn-success" name="submit" value="Add Student">
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+{% include "footer.html" %}
